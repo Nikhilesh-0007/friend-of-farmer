@@ -231,7 +231,7 @@ export default function Home() {
               'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500&q=80',
               'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&q=80',
               'https://images.unsplash.com/photo-1557844352-761f2565b576?w=500&q=80',
-              'https://images.unsplash.com/photo-1597362925123-77861d3afac1?w=500&q=80'
+              'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80'
             ].map((img, i) => (
               <div key={i} className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer">
                 <Image src={img} alt="Instagram post" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
