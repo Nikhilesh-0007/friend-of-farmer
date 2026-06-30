@@ -59,7 +59,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender green beans, handpicked for freshness.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1588015509971-ce4a22b0f4cd?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -89,7 +89,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Crisp green cabbage, ideal for stir-fries and salads.',
     category: 'Leafy Vegetables',
-    image: 'https://images.unsplash.com/photo-1596482813131-0df8eef3058a?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -109,7 +109,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh purple eggplant, perfect for traditional dishes.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1604928148815-4be429443e98?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -119,7 +119,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Healthy and hydrating bottle gourd.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1632296180735-08e8cb14ebdb?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -129,7 +129,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender ridge gourd for homestyle curries.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1595856402179-88062886f67f?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -149,7 +149,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Earthy and sweet beetroot, great for juices and salads.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1593845942699-231a47dfcbfa?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -159,7 +159,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Crisp and peppery white radish.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1592319206775-dbfbe4c7cbde?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -169,7 +169,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Hydrating fresh cucumbers, perfect for salads.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1604977042946-1ce65d60ef0c?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -179,7 +179,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Sweet and tender green peas.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1592416972076-13d4ef2898b9?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -189,7 +189,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh bitter gourd, known for its health benefits.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1598042456453-6231eb96c905?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   },
   {
@@ -199,7 +199,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender okra, perfect for crispy fries or curries.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1590435198083-207d578601ff?w=500&q=80',
+    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
     inStock: true,
   }
 ];
