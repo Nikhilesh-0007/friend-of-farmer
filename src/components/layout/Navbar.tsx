@@ -77,23 +77,21 @@ export default function Navbar() {
       <header
         ref={navRef}
         className={cn(
-          'fixed left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out',
-          isScrolled
-            ? 'top-4 px-4 md:px-8'
-            : 'top-0 px-0'
+          'fixed left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out px-4 md:px-8',
+          isScrolled ? 'top-4' : 'top-6'
         )}
       >
         <div className={cn(
-          "w-full mx-auto transition-all duration-500 ease-in-out border border-transparent",
+          "w-full mx-auto transition-all duration-500 ease-in-out border rounded-full px-6 max-w-6xl",
           isScrolled 
-            ? "glass shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-white/20 rounded-full px-6 max-w-5xl" 
-            : "bg-transparent py-4 px-4 md:px-6 max-w-7xl"
+            ? "glass shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-white/30 py-2" 
+            : "glass shadow-[0_4px_20px_rgb(0,0,0,0.08)] border-white/20 py-3 bg-white/70 backdrop-blur-xl dark:bg-black/40"
         )}>
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-14 md:h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center group" onClick={() => setIsMobileMenuOpen(false)}>
-              <div ref={logoRef} className="relative h-14 w-48 md:h-16 md:w-56 transition-transform duration-300 group-hover:scale-105">
-                <Image src="/image1.png" alt="Friends of Farmer Logo" fill className="object-contain" priority />
+              <div ref={logoRef} className="relative h-12 w-40 md:h-14 md:w-48 transition-transform duration-300 group-hover:scale-105">
+                <Image src="/logo2.png" alt="Friends of Farmer Logo" fill className="object-contain" priority />
               </div>
             </Link>
 
@@ -105,13 +103,13 @@ export default function Navbar() {
                   href={link.href}
                   className={cn(
                     'relative text-[15px] font-medium transition-colors hover:text-primary group py-2',
-                    pathname === link.href ? 'text-primary font-semibold' : 'text-foreground/80'
+                    pathname === link.href ? 'text-primary font-bold' : 'text-foreground/90'
                   )}
                 >
                   {link.name}
                   <span 
                     className={cn(
-                      'absolute bottom-0 left-0 w-full h-0.5 bg-primary transform origin-left transition-transform duration-300 ease-out',
+                      'absolute bottom-0 left-0 w-full h-[2px] bg-primary transform origin-left transition-transform duration-300 ease-out',
                       pathname === link.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     )}
                   />
@@ -168,7 +166,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between p-6 border-b border-border">
                 <div className="relative h-12 w-32">
-                  <Image src="/image1.png" alt="Friends of Farmer" fill className="object-contain" />
+                  <Image src="/logo2.png" alt="Friends of Farmer" fill className="object-contain" />
                 </div>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                   <X className="h-6 w-6" />
