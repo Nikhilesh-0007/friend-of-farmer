@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image 
             src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop"
@@ -78,40 +78,40 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background/30 to-transparent" />
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
         </div>
         
         {/* Floating Elements (Hidden on mobile) */}
-        <div className="hidden lg:block absolute top-[15%] left-[5%] float-veg-1 z-10 w-16 h-16 rounded-full glass flex items-center justify-center shadow-lg border border-white/20">
-          <span className="text-3xl">🍅</span>
+        <div className="hidden lg:flex absolute top-[20%] left-[8%] float-veg-1 z-10 w-20 h-20 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
+          <span className="text-4xl drop-shadow-md">🍅</span>
         </div>
-        <div className="hidden lg:block absolute bottom-[20%] right-[8%] float-veg-2 z-10 w-14 h-14 rounded-full glass flex items-center justify-center shadow-lg border border-white/20">
-          <span className="text-2xl">🥦</span>
+        <div className="hidden lg:flex absolute bottom-[25%] right-[10%] float-veg-2 z-10 w-16 h-16 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
+          <span className="text-3xl drop-shadow-md">🥦</span>
         </div>
-        <div className="hidden lg:block absolute top-[25%] right-[10%] float-veg-3 z-10 w-12 h-12 rounded-full glass flex items-center justify-center shadow-lg border border-white/20">
-          <span className="text-2xl">🥕</span>
+        <div className="hidden lg:flex absolute top-[30%] right-[15%] float-veg-3 z-10 w-14 h-14 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
+          <span className="text-2xl drop-shadow-md">🥕</span>
         </div>
 
-        <div className="container relative z-20 mx-auto px-4 text-center">
+        <div className="container relative z-20 mx-auto px-4 text-center mt-8">
           <div className="hero-badge inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-dark text-white mb-8 border border-white/10 shadow-sm">
             <Leaf className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium tracking-wide uppercase">100% Organic Farmers Market</span>
           </div>
-          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance">
-            Fresh harvest, straight to your <span className="text-primary drop-shadow-md">kitchen.</span>
+          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance drop-shadow-lg">
+            Fresh harvest, straight to your <span className="text-primary drop-shadow-xl">kitchen.</span>
           </h1>
-          <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto text-balance font-medium">
+          <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-12 max-w-2xl mx-auto text-balance font-medium drop-shadow-md">
             Hand-picked daily in Bengaluru. Experience the true taste of nature with free next-day delivery.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
             <Link href="/products" className="hero-cta w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full px-10 h-14 text-lg shadow-xl shadow-primary/30 transition-transform active:scale-95 border-none">
-                Shop Fresh Produce <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full px-12 h-16 text-lg shadow-xl shadow-primary/30 transition-transform hover:scale-105 active:scale-95 border-none">
+                Shop Fresh Produce <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </Link>
             <Link href="/about" className="hero-cta w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/40 rounded-full px-10 h-14 text-lg backdrop-blur-md shadow-lg transition-transform active:scale-95">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-black/20 hover:bg-black/40 text-white border-white/30 rounded-full px-12 h-16 text-lg backdrop-blur-md shadow-lg transition-transform hover:scale-105 active:scale-95">
                 Our Farm Story
               </Button>
             </Link>
