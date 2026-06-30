@@ -77,13 +77,18 @@ export default function Navbar() {
       <header
         ref={navRef}
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out border-b border-transparent',
+          'fixed left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out',
           isScrolled
-            ? 'glass shadow-sm border-border/50 py-2'
-            : 'bg-transparent py-4'
+            ? 'top-4 px-4 md:px-8'
+            : 'top-0 px-0'
         )}
       >
-        <div className="container mx-auto px-4 md:px-6">
+        <div className={cn(
+          "w-full mx-auto transition-all duration-500 ease-in-out border border-transparent",
+          isScrolled 
+            ? "glass shadow-[0_8px_30px_rgb(0,0,0,0.06)] border-white/20 rounded-full px-6 max-w-5xl" 
+            : "bg-transparent py-4 px-4 md:px-6 max-w-7xl"
+        )}>
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group" onClick={() => setIsMobileMenuOpen(false)}>
