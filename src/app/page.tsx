@@ -87,7 +87,7 @@ export default function Home() {
             <Leaf className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium tracking-wide uppercase">100% Organic Farmers Market</span>
           </div>
-          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 max-w-5xl mx-auto leading-tight text-balance drop-shadow-lg">
+          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance drop-shadow-lg">
             Fresh harvest, <br /> straight to your <span className="text-primary drop-shadow-xl">kitchen.</span>
           </h1>
           <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-12 max-w-2xl mx-auto text-balance font-medium drop-shadow-md">
