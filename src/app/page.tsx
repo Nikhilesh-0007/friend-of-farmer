@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-32 pb-24">
+      <section ref={heroRef} className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-12">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop"
