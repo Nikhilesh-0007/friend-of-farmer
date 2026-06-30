@@ -36,7 +36,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">Get in Touch</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-balance">
-            Have a question about our farm, an order, or just want to say hi? We'd love to hear from you.
+            Have a question about our farm, an order, or just want to say hi? We&apos;d love to hear from you.
           </p>
         </div>
       </div>

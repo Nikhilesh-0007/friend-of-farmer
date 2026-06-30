@@ -91,7 +91,7 @@ export default function AboutPage() {
                 Bridging the gap between farm and table.
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Friends of Farmer was born out of a desire to eliminate the complex supply chains that degrade vegetable quality and exploit farmers. We realized that by the time a vegetable reaches a city supermarket, it's often days old and has passed through multiple middlemen.
+                Friends of Farmer was born out of a desire to eliminate the complex supply chains that degrade vegetable quality and exploit farmers. We realized that by the time a vegetable reaches a city supermarket, it&apos;s often days old and has passed through multiple middlemen.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Today, we work directly with over 50 local farmers across Karnataka. We harvest early in the morning, sort with care, and deliver straight to your kitchen by afternoon. No warehouses. No middlemen. Just pure, farm-fresh goodness.

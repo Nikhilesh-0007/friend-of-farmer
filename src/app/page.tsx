@@ -203,7 +203,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-4xl">
           <Star className="h-12 w-12 mx-auto mb-8 text-accent fill-accent" />
           <h2 className="font-heading text-3xl md:text-5xl font-bold mb-10 leading-tight text-balance">
-            "The vegetables are incredibly fresh, and the delivery is always on time. Friends of Farmer has completely changed how I shop for groceries!"
+            &quot;The vegetables are incredibly fresh, and the delivery is always on time. Friends of Farmer has completely changed how I shop for groceries!&quot;
           </h2>
           <div className="flex items-center justify-center gap-4">
             <div className="w-14 h-14 rounded-full bg-white/20 overflow-hidden">

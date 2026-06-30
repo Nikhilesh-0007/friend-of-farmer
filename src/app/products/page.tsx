@@ -24,6 +24,7 @@ export default function ProductsPage() {
   });
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (gridRef.current && filteredProducts.length > 0) {
       const cards = gridRef.current.children;
       gsap.fromTo(cards, 
@@ -93,7 +94,7 @@ export default function ProductsPage() {
               <Search className="h-10 w-10 text-primary" />
             </div>
             <h3 className="font-heading text-3xl font-bold mb-3 text-foreground">No products found</h3>
-            <p className="text-muted-foreground text-lg mb-8">We couldn't find anything matching your search.</p>
+            <p className="text-muted-foreground text-lg mb-8">We couldn&apos;t find anything matching your search.</p>
             <Button 
               size="lg"
               className="rounded-full px-8 h-12 shadow-lg shadow-primary/20"
