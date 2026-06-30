@@ -152,25 +152,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 bg-primary text-primary-foreground text-center">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <Star className="h-12 w-12 mx-auto mb-8 text-accent fill-accent" />
-          <h2 className="font-heading text-3xl md:text-5xl font-bold mb-10 leading-tight text-balance">
-            &quot;The vegetables are incredibly fresh, and the delivery is always on time. Friends of Farmer has completely changed how I shop for groceries!&quot;
-          </h2>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-14 h-14 rounded-full bg-white/20 overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&q=80" alt="Customer" width={56} height={56} className="object-cover" />
-            </div>
-            <div className="text-left">
-              <p className="font-semibold text-lg">Priya Sharma</p>
-              <p className="text-primary-foreground/70 text-sm">Indiranagar, Bengaluru</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Instagram Gallery */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
