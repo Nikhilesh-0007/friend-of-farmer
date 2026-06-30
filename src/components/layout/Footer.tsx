@@ -1,102 +1,115 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Heart, Camera, MessageSquare, ThumbsUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-primary text-white pt-16 pb-8">
+    <footer className="bg-[#1A1A1A] text-white pt-20 pb-10">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Info */}
-          <div className="space-y-4">
-            <Link href="/" className="inline-block">
-              <div className="relative h-32 w-80">
-                <Image src="/logo2.png" alt="Friends of Farmer Logo" fill className="object-contain" />
-              </div>
-            </Link>
-            <p className="text-white/80 mt-4 leading-relaxed">
-              Fresh Vegetables at Wholesale Prices. Bringing farm-fresh goodness directly to your doorstep in Bengaluru.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          
+          {/* Brand Col */}
+          <div className="space-y-6">
+            <div className="relative h-16 w-56 bg-white/10 rounded-xl p-2">
+              <Image 
+                src="/image1.png" 
+                alt="Friends of Farmer Logo" 
+                fill 
+                className="object-contain p-2"
+                style={{ filter: 'brightness(0) invert(1)' }} 
+              />
+            </div>
+            <p className="text-white/60 leading-relaxed max-w-sm text-balance text-sm">
+              Premium organic vegetables harvested daily and delivered fresh to your doorstep. Supporting local farmers, building healthier communities.
             </p>
+            <div className="flex gap-4">
+              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-colors">
+                <Camera className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-colors">
+                <ThumbsUp className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full bg-white/5 hover:bg-primary hover:text-white transition-colors">
+                <MessageSquare className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-6">Quick Links</h3>
+            <h4 className="font-heading text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4">
-              <li>
-                <Link href="/" className="text-white/80 hover:text-white transition-colors">Home</Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-white/80 hover:text-white transition-colors">Products</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-white/80 hover:text-white transition-colors">Contact</Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-heading font-semibold text-lg mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-white/80">
-                <MapPin className="h-5 w-5 shrink-0 mt-0.5 text-[#81C784]" />
-                <span>Bhuvaneshwari Nagar, Bengaluru</span>
-              </li>
-              <li className="flex items-center gap-3 text-white/80">
-                <Phone className="h-5 w-5 shrink-0 text-[#81C784]" />
-                <span>+91 8050777342</span>
-              </li>
-              <li className="flex items-center gap-3 text-white/80">
-                <Mail className="h-5 w-5 shrink-0 text-[#81C784]" />
-                <span>chanduchandan@gmail.com</span>
-              </li>
+              {['Home', 'About Us', 'Products', 'Cart', 'Contact'].map((link) => (
+                <li key={link}>
+                  <Link 
+                    href={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`} 
+                    className="text-white/60 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-2 group"
+                  >
+                    <span className="h-px w-0 bg-primary group-hover:w-4 transition-all duration-300" />
+                    {link}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Business Hours */}
           <div>
-            <h3 className="font-heading font-semibold text-lg mb-6">Business Hours</h3>
-            <ul className="space-y-4 text-white/80">
+            <h4 className="font-heading text-lg font-semibold mb-6 text-white">Business Hours</h4>
+            <ul className="space-y-4 text-sm text-white/60">
               <li className="flex justify-between border-b border-white/10 pb-2">
-                <span>Monday - Sunday</span>
-                <span>9:00 AM - 9:00 PM</span>
+                <span>Monday - Friday</span>
+                <span className="text-white/90 font-medium">8:00 AM - 8:00 PM</span>
               </li>
-              <li className="pt-4">
-                <a
-                  href="https://www.instagram.com/friends_of_farmer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors px-4 py-2 rounded-lg text-white"
-                >
-                  <svg
-                    className="h-5 w-5"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                  </svg>
-                  <span>Follow on Instagram</span>
-                </a>
+              <li className="flex justify-between border-b border-white/10 pb-2">
+                <span>Saturday</span>
+                <span className="text-white/90 font-medium">8:00 AM - 5:00 PM</span>
+              </li>
+              <li className="flex justify-between border-b border-white/10 pb-2">
+                <span>Sunday</span>
+                <span className="text-primary font-medium">Closed</span>
               </li>
             </ul>
           </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-heading text-lg font-semibold mb-6 text-white">Get in Touch</h4>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-4">
+                <div className="mt-1 bg-white/10 p-2 rounded-lg">
+                  <MapPin className="h-4 w-4 text-primary" />
+                </div>
+                <span className="text-white/60 text-sm leading-relaxed">
+                  123 Organic Lane, Farm District<br />
+                  Bengaluru, Karnataka 560001
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <div className="bg-white/10 p-2 rounded-lg">
+                  <Phone className="h-4 w-4 text-primary" />
+                </div>
+                <span className="text-white/60 text-sm">+91 87920 36725</span>
+              </li>
+              <li className="flex items-center gap-4">
+                <div className="bg-white/10 p-2 rounded-lg">
+                  <Mail className="h-4 w-4 text-primary" />
+                </div>
+                <span className="text-white/60 text-sm">bojjanikhilesh9@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-white/60 text-sm">
-          <p>Friends of Farmer © {currentYear}. All rights reserved.</p>
-          <p className="mt-2 md:mt-0">Designed for freshness.</p>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-white/40 text-sm">
+            © {new Date().getFullYear()} Friends of Farmer. All rights reserved.
+          </p>
+          <p className="text-white/40 text-sm flex items-center gap-1">
+            Made with <Heart className="h-3 w-3 text-destructive fill-destructive" /> for local farmers
+          </p>
         </div>
       </div>
     </footer>
