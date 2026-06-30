@@ -21,41 +21,7 @@ export default function Home() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Features Scroll Trigger
-      if (featuresRef.current) {
-        gsap.fromTo('.feature-card',
-          { y: 40, opacity: 0 },
-          {
-            scrollTrigger: {
-              trigger: featuresRef.current,
-              start: 'top 80%',
-            },
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            stagger: 0.15,
-            ease: 'power2.out',
-          }
-        );
-      }
-
-      // Timeline Scroll Trigger
-      if (timelineRef.current) {
-        gsap.fromTo('.timeline-step',
-          { x: -30, opacity: 0 },
-          {
-            scrollTrigger: {
-              trigger: timelineRef.current,
-              start: 'top 75%',
-            },
-            x: 0,
-            opacity: 1,
-            duration: 0.5,
-            stagger: 0.2,
-            ease: 'power2.out',
-          }
-        );
-      }
+      // Removed GSAP ScrollTriggers that cause opacity bugs in Next.js Fast Refresh
     });
 
     return () => ctx.revert();
