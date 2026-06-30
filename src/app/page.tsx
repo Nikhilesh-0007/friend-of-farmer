@@ -75,22 +75,11 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop"
             alt="Farm Fresh Vegetables"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-black/65" />
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
-        </div>
-
-        {/* Floating Elements (Hidden on mobile) */}
-        <div className="hidden lg:flex absolute top-[20%] left-[8%] float-veg-1 z-10 w-20 h-20 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-4xl drop-shadow-md">🍅</span>
-        </div>
-        <div className="hidden lg:flex absolute bottom-[25%] right-[10%] float-veg-2 z-10 w-16 h-16 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-3xl drop-shadow-md">🥦</span>
-        </div>
-        <div className="hidden lg:flex absolute top-[30%] right-[15%] float-veg-3 z-10 w-14 h-14 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-2xl drop-shadow-md">🥕</span>
         </div>
 
         <div className="container relative z-20 mx-auto px-4 text-center mt-8">
