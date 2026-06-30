@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[100dvh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-12">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-32 pb-24">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop"
@@ -48,7 +48,7 @@ export default function Home() {
             <Leaf className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium tracking-wide uppercase">100% Organic Farmers Market</span>
           </div>
-          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance drop-shadow-lg">
+          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 w-full mx-auto leading-tight drop-shadow-lg">
             Fresh harvest, <br /> straight to your <span className="text-primary drop-shadow-xl">kitchen.</span>
           </h1>
           <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-12 max-w-2xl mx-auto text-balance font-medium drop-shadow-md">
