@@ -22,7 +22,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 text-center max-w-2xl">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-white/80 text-lg">
-            Have a question about our vegetables or your order? We're here to help.
+            Have a question about our vegetables or your order? We&apos;re here to help.
           </p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default function ContactPage() {
                     <p className="text-muted-foreground mt-1">Bhuvaneshwari Nagar, Bengaluru</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 p-3 rounded-full shrink-0">
                     <Phone className="h-6 w-6 text-primary" />
@@ -53,7 +53,7 @@ export default function ContactPage() {
                     <p className="text-muted-foreground mt-1">+91 8050777342</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="bg-primary/10 p-3 rounded-full shrink-0">
                     <Mail className="h-6 w-6 text-primary" />
@@ -70,16 +70,16 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg">Business Hours</h3>
-                    <p className="text-muted-foreground mt-1">Monday – Sunday<br/>9:00 AM – 9:00 PM</p>
+                    <p className="text-muted-foreground mt-1">Monday – Sunday<br />9:00 AM – 9:00 PM</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-6 border-t border-border">
-              <a 
-                href="https://wa.me/916360881181" 
-                target="_blank" 
+              <a
+                href="https://wa.me/916360881181"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-xl font-semibold transition-colors"
               >
@@ -104,17 +104,17 @@ export default function ContactPage() {
                     <Input id="lastName" className="bg-muted/50" />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
                   <Input id="email" type="email" required className="bg-muted/50" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="subject">Subject</Label>
                   <Input id="subject" required className="bg-muted/50" />
                 </div>
-                
+
                 <div className="space-y-2">
                   <Label htmlFor="message">Message</Label>
                   <Textarea id="message" required rows={5} className="bg-muted/50 resize-none" />

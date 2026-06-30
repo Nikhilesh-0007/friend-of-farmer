@@ -22,6 +22,7 @@ export default function CartPage() {
   });
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 
@@ -74,7 +75,7 @@ Please confirm my order.`;
                 <ShoppingCart className="h-12 w-12 text-primary" />
               </div>
               <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
-              <p className="text-muted-foreground mb-8">Looks like you haven't added any fresh vegetables yet.</p>
+              <p className="text-muted-foreground mb-8">Looks like you haven&apos;t added any fresh vegetables yet.</p>
               <Link href="/products">
                 <Button size="lg" className="rounded-full px-8">
                   Start Shopping
