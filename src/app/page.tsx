@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Leaf, ShieldCheck, Truck, Clock, Star, Camera } from 'lucide-react';
+import { ArrowRight, Leaf, ShieldCheck, Truck, Clock, Star, Camera, Coins, Heart, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import PageWrapper from '@/components/layout/PageWrapper';
 import { vegetables } from '@/data/vegetables';
@@ -28,9 +28,9 @@ export default function Home() {
       gsap.from('.hero-cta', { y: 20, opacity: 0, duration: 0.6, delay: 0.7, stagger: 0.1 });
       
       // Floating vegetables (decorative)
-      gsap.to('.float-veg-1', { y: -20, rotation: 10, duration: 3, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-      gsap.to('.float-veg-2', { y: 25, rotation: -15, duration: 4, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1 });
-      gsap.to('.float-veg-3', { y: -15, rotation: 5, duration: 3.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5 });
+      gsap.to('.float-veg-1', { y: -15, rotation: 10, duration: 6, repeat: -1, yoyo: true, ease: 'sine.inOut' });
+      gsap.to('.float-veg-2', { y: 20, rotation: -15, duration: 7, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1 });
+      gsap.to('.float-veg-3', { y: -10, rotation: 5, duration: 6.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5 });
 
       // Features Scroll Trigger
       if (featuresRef.current) {
@@ -78,39 +78,40 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background/30 to-transparent" />
         </div>
         
         {/* Floating Elements (Hidden on mobile) */}
-        <div className="hidden lg:block absolute top-1/4 left-10 float-veg-1 z-10 w-24 h-24 rounded-full glass flex items-center justify-center">
-          <span className="text-4xl">🍅</span>
+        <div className="hidden lg:block absolute top-[15%] left-[5%] float-veg-1 z-10 w-16 h-16 rounded-full glass flex items-center justify-center shadow-lg border border-white/20">
+          <span className="text-3xl">🍅</span>
         </div>
-        <div className="hidden lg:block absolute bottom-1/3 right-12 float-veg-2 z-10 w-20 h-20 rounded-full glass flex items-center justify-center">
-          <span className="text-4xl">🥦</span>
+        <div className="hidden lg:block absolute bottom-[20%] right-[8%] float-veg-2 z-10 w-14 h-14 rounded-full glass flex items-center justify-center shadow-lg border border-white/20">
+          <span className="text-2xl">🥦</span>
         </div>
-        <div className="hidden lg:block absolute top-1/3 right-1/4 float-veg-3 z-10 w-16 h-16 rounded-full glass flex items-center justify-center">
-          <span className="text-3xl">🥕</span>
+        <div className="hidden lg:block absolute top-[25%] right-[10%] float-veg-3 z-10 w-12 h-12 rounded-full glass flex items-center justify-center shadow-lg border border-white/20">
+          <span className="text-2xl">🥕</span>
         </div>
 
         <div className="container relative z-20 mx-auto px-4 text-center">
-          <div className="hero-badge inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-dark text-white mb-8">
+          <div className="hero-badge inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-dark text-white mb-8 border border-white/10 shadow-sm">
             <Leaf className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium tracking-wide uppercase">100% Organic Farmers Market</span>
           </div>
           <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance">
             Fresh harvest, straight to your <span className="text-primary drop-shadow-md">kitchen.</span>
           </h1>
-          <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto text-balance">
+          <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-10 max-w-2xl mx-auto text-balance font-medium">
             Hand-picked daily in Bengaluru. Experience the true taste of nature with free next-day delivery.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/products" className="hero-cta w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full px-10 h-14 text-lg shadow-xl shadow-primary/30 transition-transform active:scale-95">
+              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full px-10 h-14 text-lg shadow-xl shadow-primary/30 transition-transform active:scale-95 border-none">
                 Shop Fresh Produce <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/about" className="hero-cta w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/30 rounded-full px-10 h-14 text-lg backdrop-blur-md transition-transform active:scale-95">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border-white/40 rounded-full px-10 h-14 text-lg backdrop-blur-md shadow-lg transition-transform active:scale-95">
                 Our Farm Story
               </Button>
             </Link>
@@ -120,24 +121,27 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section ref={featuresRef} className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl font-bold mb-4">Why Friends of Farmer?</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We cut out the middlemen so you get fresher vegetables while supporting local farmers directly.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Leaf, title: 'Farm Fresh', desc: 'Sourced daily from local farmers in Karnataka.' },
-              { icon: Truck, title: 'Free Delivery', desc: 'Free home delivery across Bengaluru on all orders.' },
-              { icon: ShieldCheck, title: 'Quality Assured', desc: 'Every vegetable is hand-inspected before delivery.' },
+              { icon: Leaf, title: 'Farm Fresh', desc: 'Fresh vegetables sourced daily directly from farms.' },
+              { icon: Truck, title: 'Free Home Delivery', desc: 'Fast doorstep delivery across Bengaluru on all orders.' },
+              { icon: Coins, title: 'Wholesale Prices', desc: 'Affordable pricing without middlemen or markups.' },
+              { icon: ShieldCheck, title: 'Quality Assured', desc: 'Every vegetable is carefully inspected for quality.' },
+              { icon: Heart, title: 'Support Local Farmers', desc: 'Helping local farmers grow and thrive sustainably.' },
+              { icon: Smartphone, title: 'Easy WhatsApp Ordering', desc: 'Quick and seamless ordering in just a few taps.' },
             ].map((feature, i) => (
-              <div key={i} className="feature-card flex flex-col items-center text-center p-8 rounded-3xl bg-white shadow-sm border border-border hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                <div className="h-20 w-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 rotate-3 hover:rotate-0 transition-transform">
+              <div key={i} className="feature-card flex flex-col items-center text-center p-10 h-full rounded-3xl bg-card shadow-sm border border-border hover:shadow-xl transition-all duration-500 hover:-translate-y-2 group">
+                <div className="h-20 w-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-500">
                   <feature.icon className="h-10 w-10 text-primary" />
                 </div>
-                <h3 className="font-heading text-2xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                <h3 className="font-heading text-2xl font-bold mb-4">{feature.title}</h3>
+                <p className="text-muted-foreground text-[15px] leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
