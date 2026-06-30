@@ -27,11 +27,6 @@ export default function Home() {
       gsap.from('.hero-desc', { y: 20, opacity: 0, duration: 0.6, delay: 0.5 });
       gsap.from('.hero-cta', { y: 20, opacity: 0, duration: 0.6, delay: 0.7, stagger: 0.1 });
       
-      // Floating vegetables (decorative)
-      gsap.to('.float-veg-1', { y: -15, rotation: 10, duration: 6, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-      gsap.to('.float-veg-2', { y: 20, rotation: -15, duration: 7, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1 });
-      gsap.to('.float-veg-3', { y: -10, rotation: 5, duration: 6.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5 });
-
       // Features Scroll Trigger
       if (featuresRef.current) {
         gsap.from('.feature-card', {
@@ -75,22 +70,11 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop"
             alt="Farm Fresh Vegetables"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
           />
           <div className="absolute inset-0 bg-black/65" />
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/40 to-transparent pointer-events-none" />
-        </div>
-        
-        {/* Floating Elements (Hidden on mobile) */}
-        <div className="hidden lg:flex absolute top-[20%] left-[8%] float-veg-1 z-10 w-20 h-20 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-4xl drop-shadow-md">🍅</span>
-        </div>
-        <div className="hidden lg:flex absolute bottom-[25%] right-[10%] float-veg-2 z-10 w-16 h-16 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-3xl drop-shadow-md">🥦</span>
-        </div>
-        <div className="hidden lg:flex absolute top-[30%] right-[15%] float-veg-3 z-10 w-14 h-14 rounded-full glass-dark items-center justify-center shadow-2xl border border-white/10">
-          <span className="text-2xl drop-shadow-md">🥕</span>
         </div>
 
         <div className="container relative z-20 mx-auto px-4 text-center mt-8">
@@ -98,8 +82,8 @@ export default function Home() {
             <Leaf className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium tracking-wide uppercase">100% Organic Farmers Market</span>
           </div>
-          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 max-w-5xl mx-auto leading-tight text-balance drop-shadow-lg">
-            Fresh harvest, straight to your <span className="text-primary drop-shadow-xl">kitchen.</span>
+          <h1 className="hero-title font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 max-w-5xl mx-auto leading-tight text-balance drop-shadow-lg">
+            Fresh harvest, <br className="hidden md:block" /> straight to your <span className="text-primary drop-shadow-xl">kitchen.</span>
           </h1>
           <p className="hero-desc text-lg md:text-xl lg:text-2xl text-white/90 mb-12 max-w-2xl mx-auto text-balance font-medium drop-shadow-md">
             Hand-picked daily in Bengaluru. Experience the true taste of nature with free next-day delivery.
