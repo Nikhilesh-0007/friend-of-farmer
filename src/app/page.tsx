@@ -177,7 +177,12 @@ export default function Home() {
           <div className="flex flex-col items-center text-center mb-12">
             <Camera className="h-10 w-10 text-primary mb-4" />
             <h2 className="font-heading text-4xl font-bold mb-4">Join our Community</h2>
-            <p className="text-muted-foreground text-lg">Follow us on Instagram @friendsoffarmer for daily fresh updates.</p>
+            <p className="text-muted-foreground text-lg mb-6">Follow us on Instagram @friends_of_farmer for daily fresh updates.</p>
+            <Link href="https://www.instagram.com/friends_of_farmer?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-white shadow-lg transition-transform hover:scale-105 active:scale-95 border-none">
+                <Camera className="mr-2 h-5 w-5" /> Follow on Instagram
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
