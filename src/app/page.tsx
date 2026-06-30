@@ -21,17 +21,6 @@ export default function Home() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Hero Animations
-      gsap.from('.hero-badge', { y: 20, opacity: 0, duration: 0.6, delay: 0.2 });
-      gsap.from('.hero-title', { y: 30, opacity: 0, duration: 0.8, delay: 0.3 });
-      gsap.from('.hero-desc', { y: 20, opacity: 0, duration: 0.6, delay: 0.5 });
-      gsap.from('.hero-cta', { y: 20, opacity: 0, duration: 0.6, delay: 0.7, stagger: 0.1 });
-
-      // Floating vegetables (decorative)
-      gsap.to('.float-veg-1', { y: -15, rotation: 10, duration: 6, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-      gsap.to('.float-veg-2', { y: 20, rotation: -15, duration: 7, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 1 });
-      gsap.to('.float-veg-3', { y: -10, rotation: 5, duration: 6.5, repeat: -1, yoyo: true, ease: 'sine.inOut', delay: 0.5 });
-
       // Features Scroll Trigger
       if (featuresRef.current) {
         gsap.from('.feature-card', {
