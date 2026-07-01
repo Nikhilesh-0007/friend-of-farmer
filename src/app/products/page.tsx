@@ -47,20 +47,13 @@ export default function ProductsPage() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <div className="relative pt-40 pb-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?q=80&w=1920&auto=format&fit=crop"
-            alt="Fresh Organic Vegetables Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]" />
-        </div>
+      <div className="bg-primary/5 pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 leaf-pattern opacity-50" />
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-md">
-            Farm Fresh <span className="text-primary drop-shadow-lg">Produce</span>
+          <h1 className="font-heading text-5xl md:text-6xl font-bold mb-6 text-foreground">
+            Farm Fresh <span className="text-primary">Produce</span>
           </h1>
-          <p className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed text-balance drop-shadow">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed text-balance">
             Browse our hand-picked selection of organic vegetables. Sourced directly from local farmers and delivered to your doorstep within 24 hours.
           </p>
         </div>
