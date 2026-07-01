@@ -12,9 +12,10 @@ import gsap from 'gsap';
 
 interface ProductCardProps {
   product: Product;
+  isListView?: boolean;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, isListView = false }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   
@@ -69,10 +70,16 @@ export default function ProductCard({ product }: ProductCardProps) {
       ref={cardRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition-shadow duration-500 border border-border"
+      className={cn(
+        "group flex bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] transition-shadow duration-500 border border-border w-full",
+        isListView ? "flex-col sm:flex-row sm:h-56" : "flex-col"
+      )}
     >
       {/* Image Container */}
-      <div className="relative aspect-square overflow-hidden bg-muted/50 p-6 flex items-center justify-center">
+      <div className={cn(
+        "relative overflow-hidden bg-muted/50 flex items-center justify-center shrink-0",
+        isListView ? "aspect-square sm:aspect-auto sm:w-56 sm:h-56" : "aspect-square p-6"
+      )}>
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
           <span className="inline-flex items-center gap-1 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-primary shadow-sm border border-white/40">
             <Leaf className="h-3 w-3" /> Fresh Today
@@ -103,15 +110,21 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-6 flex flex-col flex-1">
-        <div className="mb-4">
+      <div className={cn(
+        "p-6 flex flex-col flex-1",
+        isListView ? "justify-center gap-2" : ""
+      )}>
+        <div className={cn(isListView ? "" : "mb-4")}>
           <h3 className="font-heading text-xl font-semibold mb-1 text-foreground">{product.name}</h3>
           <p className="text-muted-foreground text-sm line-clamp-2 leading-relaxed">
             {product.description}
           </p>
         </div>
 
-        <div className="mt-auto pt-4 flex items-center justify-between gap-4 border-t border-border/50">
+        <div className={cn(
+          "mt-auto pt-4 flex items-center justify-between gap-4 border-t border-border/50",
+          isListView ? "border-t-0 pt-2 mt-0 max-w-xs" : ""
+        )}>
           {quantity === 0 ? (
             <Button
               className="w-full rounded-2xl h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all active:scale-95"
