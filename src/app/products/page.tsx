@@ -10,7 +10,7 @@ import ProductCard from '@/components/ui/ProductCard';
 import gsap from 'gsap';
 import { cn } from '@/lib/utils';
 
-const categories = ['All', 'Root Vegetables', 'Leafy Vegetables', 'Gourds', 'Exotic Vegetables', 'Seasonal Vegetables'];
+const categories = ['All', 'Root Vegetables', 'Leafy Vegetables', 'Gourds', 'Exotic Vegetables'];
 
 export default function ProductsPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -102,7 +102,13 @@ export default function ProductsPage() {
               <select 
                 value={sortBy} 
                 onChange={(e) => setSortBy(e.target.value)}
-                className="h-10 rounded-full border border-input bg-white px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-pointer shadow-sm"
+                className="h-11 rounded-full border border-border bg-white pl-4 pr-10 py-2 text-sm font-medium text-foreground hover:border-primary/50 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-primary/20 cursor-pointer shadow-sm appearance-none"
+                style={{ 
+                  backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232E7D32' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`, 
+                  backgroundRepeat: 'no-repeat', 
+                  backgroundPosition: 'right 1rem center', 
+                  backgroundSize: '1em' 
+                }}
               >
                 <option value="featured">Featured</option>
                 <option value="price-asc">Price: Low to High</option>
