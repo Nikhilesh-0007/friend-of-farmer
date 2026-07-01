@@ -75,7 +75,7 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="story-image w-full lg:w-1/2 relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
               <Image 
-                src="https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?q=80&w=1000&auto=format&fit=crop" 
+                src="/about.png" 
                 alt="Farmer in a field" 
                 fill 
                 className="object-cover" 
