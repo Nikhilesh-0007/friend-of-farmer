@@ -73,12 +73,13 @@ export default function AboutPage() {
       <section ref={storyRef} className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <div className="story-image w-full lg:w-1/2 relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-xl bg-muted/20">
+            <div className="story-image w-full lg:w-1/2 relative rounded-3xl overflow-hidden shadow-xl bg-muted/10">
               <Image 
                 src="/about.png" 
                 alt="About us" 
-                fill 
-                className="object-contain p-4" 
+                width={1000}
+                height={800}
+                className="w-full h-auto object-cover" 
               />
             </div>
             
