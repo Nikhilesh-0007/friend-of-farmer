@@ -57,7 +57,7 @@ export default function AboutPage() {
   return (
     <PageWrapper>
       {/* Hero Section */}
-      <section ref={heroRef} className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden bg-primary/5">
+      <section ref={heroRef} className="relative pt-40 pb-28 md:pt-48 md:pb-36 overflow-hidden bg-primary/5">
         <div className="absolute inset-0 leaf-pattern opacity-40" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="about-hero-title font-heading text-5xl md:text-7xl font-bold mb-6 text-foreground">

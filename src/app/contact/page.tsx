@@ -31,7 +31,7 @@ export default function ContactPage() {
   return (
     <PageWrapper>
       {/* Header */}
-      <div className="bg-primary/5 pt-32 pb-16 relative overflow-hidden">
+      <div className="bg-primary/5 pt-40 pb-28 relative overflow-hidden">
         <div className="absolute inset-0 leaf-pattern opacity-50" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4 text-foreground">Get in Touch</h1>
