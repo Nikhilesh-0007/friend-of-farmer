@@ -45,7 +45,7 @@ export default function CartPage() {
     
     message += `%0APlease confirm my order and provide the total pricing.`;
 
-    const whatsappUrl = `https://wa.me/918792036725?text=${message}`;
+    const whatsappUrl = `https://wa.me/916360881181?text=${message}`;
     window.open(whatsappUrl, '_blank');
     clearCart();
   };

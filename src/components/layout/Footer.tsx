@@ -74,21 +74,21 @@ export default function Footer() {
                   <MapPin className="h-4 w-4 text-primary" />
                 </div>
                 <span className="text-white/60 text-sm leading-relaxed">
-                  123 Organic Lane, Farm District<br />
-                  Bengaluru, Karnataka 560001
+                  Bhuvaneshwari Nagar, Bengaluru,<br />
+                  Karnataka, India
                 </span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-lg">
                   <Phone className="h-4 w-4 text-primary" />
                 </div>
-                <span className="text-white/60 text-sm">+91 87920 36725</span>
+                <span className="text-white/60 text-sm">+91 80507 77342</span>
               </li>
               <li className="flex items-center gap-4">
                 <div className="bg-white/10 p-2 rounded-lg">
                   <Mail className="h-4 w-4 text-primary" />
                 </div>
-                <span className="text-white/60 text-sm">bojjanikhilesh9@gmail.com</span>
+                <span className="text-white/60 text-sm">chanduchandan@gmail.com</span>
               </li>
             </ul>
           </div>

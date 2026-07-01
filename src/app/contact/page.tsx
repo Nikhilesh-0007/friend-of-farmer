@@ -49,15 +49,15 @@ export default function ContactPage() {
             <h2 className="font-heading text-3xl font-bold mb-8">Contact Information</h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <a href="tel:+918792036725" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
+              <a href="tel:+918050777342" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
                 <div className="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Phone className="h-6 w-6" />
                 </div>
                 <h3 className="font-semibold text-lg mb-1">Call Us</h3>
-                <p className="text-muted-foreground">+91 87920 36725</p>
+                <p className="text-muted-foreground">+91 80507 77342</p>
               </a>
 
-              <a href="https://wa.me/918792036725" target="_blank" rel="noreferrer" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
+              <a href="https://wa.me/916360881181" target="_blank" rel="noreferrer" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
                 <div className="w-14 h-14 bg-[#25D366]/10 text-[#25D366] rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <MessageCircle className="h-6 w-6" />
                 </div>
@@ -65,12 +65,12 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">Instant Reply</p>
               </a>
 
-              <a href="mailto:bojjanikhilesh9@gmail.com" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
+              <a href="mailto:chanduchandan@gmail.com" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
                 <div className="w-14 h-14 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Mail className="h-6 w-6" />
                 </div>
                 <h3 className="font-semibold text-lg mb-1">Email</h3>
-                <p className="text-muted-foreground break-all">bojjanikhilesh9@gmail.com</p>
+                <p className="text-muted-foreground break-all">chanduchandan@gmail.com</p>
               </a>
 
               <a href="https://instagram.com/friendsoffarmer" target="_blank" rel="noreferrer" className="flex flex-col items-center text-center p-8 bg-white rounded-3xl shadow-sm border border-border hover:shadow-lg transition-shadow group">
@@ -86,7 +86,7 @@ export default function ContactPage() {
               <Clock className="h-6 w-6 text-primary shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg mb-2">Business Hours</h3>
-                <p className="text-muted-foreground">Everyday: 9:00 AM - 9:00 PM</p>
+                <p className="text-muted-foreground">Everyday:  9:00 AM - 9:00 PM</p>
               </div>
             </div>
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-border flex items-start gap-4">
@@ -94,9 +94,8 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold text-lg mb-2">Farm & Office</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  123 Organic Lane, Farm District<br />
-                  Bengaluru, Karnataka 560001<br />
-                  India
+                  Bhuvaneshwari Nagar, Bengaluru,<br />
+                  Karnataka, India
                 </p>
               </div>
             </div>
