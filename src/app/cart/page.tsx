@@ -28,10 +28,6 @@ export default function CartPage() {
 
   if (!mounted) return null;
 
-  const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const deliveryFee = subtotal > 0 && subtotal < 500 ? 50 : 0;
-  const total = subtotal + deliveryFee;
-
   const handleCheckout = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -44,14 +40,10 @@ export default function CartPage() {
     
     message += `*Order Items:*%0A`;
     items.forEach(item => {
-      message += `- ${item.name} x ${item.quantity} (₹${item.price * item.quantity})%0A`;
+      message += `- ${item.name} x ${item.quantity} kg%0A`;
     });
     
-    message += `%0A*Summary:*%0A`;
-    message += `Subtotal: ₹${subtotal}%0A`;
-    if (deliveryFee > 0) message += `Delivery: ₹${deliveryFee}%0A`;
-    message += `*Total Amount: ₹${total}*%0A%0A`;
-    message += `Please confirm my order.`;
+    message += `%0APlease confirm my order and provide the total pricing.`;
 
     const whatsappUrl = `https://wa.me/918792036725?text=${message}`;
     window.open(whatsappUrl, '_blank');
@@ -102,11 +94,9 @@ export default function CartPage() {
                       </div>
                       
                       <div className="flex-1 w-full">
-                        <div className="flex justify-between items-start mb-2">
+                        <div className="flex justify-between items-start mb-4">
                           <h3 className="font-heading text-xl font-semibold">{item.name}</h3>
-                          <span className="font-semibold text-lg text-primary">₹{item.price * item.quantity}</span>
                         </div>
-                        <p className="text-muted-foreground text-sm mb-4">₹{item.price} / unit</p>
                         
                         <div className="flex items-center justify-between">
                           <div className="flex items-center bg-muted/50 rounded-xl p-1 border border-border">
@@ -115,12 +105,23 @@ export default function CartPage() {
                               size="icon"
                               className="h-8 w-8 rounded-lg hover:bg-white hover:shadow-sm"
                               onClick={() => {
-                                if (item.quantity > 1) updateQuantity(item.id, item.quantity - 1);
+                                if (item.quantity > 5) updateQuantity(item.id, item.quantity - 1);
                               }}
                             >
                               <Minus className="h-3 w-3" />
                             </Button>
-                            <span className="font-semibold w-10 text-center">{item.quantity}</span>
+                            <input
+                              type="number"
+                              min="5"
+                              value={item.quantity}
+                              onChange={(e) => {
+                                const val = parseInt(e.target.value);
+                                if (!isNaN(val) && val >= 5) {
+                                  updateQuantity(item.id, val);
+                                }
+                              }}
+                              className="font-semibold text-lg w-16 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                            />
                             <Button
                               variant="ghost"
                               size="icon"
@@ -152,18 +153,9 @@ export default function CartPage() {
                 <h3 className="font-heading text-2xl font-bold mb-6 pb-4 border-b border-border">Order Summary</h3>
                 
                 <div className="space-y-4 mb-8">
-                  <div className="flex justify-between text-muted-foreground">
-                    <span>Subtotal</span>
-                    <span>₹{subtotal}</span>
-                  </div>
-                  <div className="flex justify-between text-muted-foreground">
-                    <span>Delivery Fee</span>
-                    <span>{deliveryFee === 0 ? <span className="text-primary font-medium">Free</span> : `₹${deliveryFee}`}</span>
-                  </div>
-                  <div className="border-t border-border pt-4 flex justify-between font-bold text-xl">
-                    <span>Total</span>
-                    <span className="text-primary">₹{total}</span>
-                  </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Once you submit your order, our team will review the quantities and get back to you immediately on WhatsApp with the final pricing and delivery details.
+                  </p>
                 </div>
 
                 <form onSubmit={handleCheckout} className="space-y-6">

@@ -46,10 +46,10 @@ export default function ProductCard({ product, isListView = false }: ProductCard
       id: product.id,
       name: product.name,
       price: product.price,
-      quantity: 1,
+      quantity: 5,
       image: product.image,
     });
-    toast.success(`${product.name} added to cart!`);
+    toast.success(`5kg of ${product.name} added to cart!`);
   };
 
   const handleIncrement = () => {
@@ -57,7 +57,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
   };
 
   const handleDecrement = () => {
-    if (quantity > 1) {
+    if (quantity > 5) {
       updateQuantity(product.id, quantity - 1);
     } else {
       removeItem(product.id);
@@ -91,11 +91,6 @@ export default function ProductCard({ product, isListView = false }: ProductCard
           )}
         </div>
         
-        <div className="absolute top-4 right-4 z-10">
-          <span className="inline-flex items-center bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-sm font-bold text-foreground shadow-sm border border-white/40">
-            ₹{product.price}<span className="text-muted-foreground text-xs font-normal ml-0.5">/{product.unit}</span>
-          </span>
-        </div>
 
         <Image
           src={product.image}
@@ -144,7 +139,18 @@ export default function ProductCard({ product, isListView = false }: ProductCard
               >
                 <Minus className="h-4 w-4" />
               </Button>
-              <span className="font-semibold text-lg w-12 text-center">{quantity}</span>
+              <input
+                type="number"
+                min="5"
+                value={quantity}
+                onChange={(e) => {
+                  const val = parseInt(e.target.value);
+                  if (!isNaN(val) && val >= 5) {
+                    updateQuantity(product.id, val);
+                  }
+                }}
+                className="font-semibold text-lg w-16 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+              />
               <Button
                 variant="ghost"
                 size="icon"
