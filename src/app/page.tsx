@@ -80,7 +80,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { icon: Leaf, title: 'Farm Fresh', desc: 'Fresh vegetables sourced daily directly from farms.' },
-              { icon: Truck, title: 'Free Home Delivery', desc: 'Fast doorstep delivery across Bengaluru on all orders.' },
+              { icon: Truck, title: 'Free Delivery', desc: 'Fast delivery direct to your location across Bengaluru on all orders.' },
               { icon: Coins, title: 'Wholesale Prices', desc: 'Affordable pricing without middlemen or markups.' },
               { icon: ShieldCheck, title: 'Quality Assured', desc: 'Every vegetable is carefully inspected for quality.' },
               { icon: Heart, title: 'Support Local Farmers', desc: 'Helping local farmers grow and thrive sustainably.' },
@@ -135,7 +135,7 @@ export default function Home() {
               { num: '01', title: 'You Place an Order', desc: 'Browse our catalog and order easily via WhatsApp or website.' },
               { num: '02', title: 'We Harvest', desc: 'Farmers harvest your vegetables fresh early in the morning.' },
               { num: '03', title: 'Quality Check', desc: 'We clean, sort, and carefully pack your order.' },
-              { num: '04', title: 'Doorstep Delivery', desc: 'Your fresh produce arrives at your home exactly when needed.' },
+              { num: '04', title: 'Direct Delivery', desc: 'Your fresh produce arrives at your location exactly when needed.' },
             ].map((step, i) => (
               <div key={i} className="timeline-step flex items-start gap-6 mb-12 last:mb-0 relative">
                 {i !== 3 && <div className="absolute left-6 top-16 bottom-[-3rem] w-px bg-border hidden md:block" />}
