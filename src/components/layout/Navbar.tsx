@@ -87,10 +87,10 @@ export default function Navbar() {
             ? "glass shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-white/30 py-2" 
             : "glass shadow-[0_4px_20px_rgb(0,0,0,0.08)] border-white/20 py-3 bg-white/70 backdrop-blur-xl dark:bg-black/40"
         )}>
-          <div className="flex items-center justify-between h-14 md:h-16">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center group" onClick={() => setIsMobileMenuOpen(false)}>
-              <div ref={logoRef} className="relative h-12 w-40 md:h-14 md:w-48 transition-transform duration-300 group-hover:scale-105">
+              <div ref={logoRef} className="relative h-14 w-48 md:h-16 md:w-56 transition-transform duration-300 group-hover:scale-105">
                 <Image src="/logo2.png" alt="Friends of Farmer Logo" fill className="object-contain" priority />
               </div>
             </Link>
@@ -165,7 +165,7 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-background border-l border-border shadow-2xl z-50 md:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-6 border-b border-border">
-                <div className="relative h-12 w-32">
+                <div className="relative h-14 w-40">
                   <Image src="/logo2.png" alt="Friends of Farmer" fill className="object-contain" />
                 </div>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
