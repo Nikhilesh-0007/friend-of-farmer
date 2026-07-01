@@ -59,7 +59,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Juicy red tomatoes, ideal for curries and salads.',
     category: 'Exotic Vegetables',
-    image: '/products/prod_5.png',
+    image: '/ttttt.png',
     inStock: true,
   },
   {
