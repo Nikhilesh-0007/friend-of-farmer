@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div className="relative h-16 w-56 bg-white/10 rounded-xl p-2">
               <Image 
-                src="/image1.png" 
+                src="/logo2.png" 
                 alt="Friends of Farmer Logo" 
                 fill 
                 className="object-contain p-2"
