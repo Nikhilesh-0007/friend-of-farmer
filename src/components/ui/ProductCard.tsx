@@ -123,21 +123,39 @@ export default function ProductCard({ product, isListView = false }: ProductCard
         )}>
           {quantity === 0 ? (
             <div className="flex items-center gap-2 w-full">
-              <div className="flex items-center bg-muted/50 rounded-2xl p-1 border border-border h-12 w-24 shrink-0">
-                <input
-                  type="number"
-                  min="5"
-                  value={localQuantity}
-                  onChange={(e) => {
-                    const val = parseInt(e.target.value);
-                    if (!isNaN(val) && val >= 5) setLocalQuantity(val);
-                  }}
-                  className="font-semibold text-lg w-full text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
-                />
-                <span className="text-muted-foreground text-xs font-medium pr-3">kg</span>
+              <div className="flex items-center justify-between bg-muted/50 rounded-2xl p-1 border border-border h-12 w-32 shrink-0">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-full w-8 rounded-xl hover:bg-white hover:shadow-sm"
+                  onClick={() => setLocalQuantity(q => Math.max(5, q - 1))}
+                >
+                  <Minus className="h-3 w-3" />
+                </Button>
+                <div className="flex items-center justify-center">
+                  <input
+                    type="number"
+                    min="5"
+                    value={localQuantity}
+                    onChange={(e) => {
+                      const val = parseInt(e.target.value);
+                      if (!isNaN(val) && val >= 5) setLocalQuantity(val);
+                    }}
+                    className="font-semibold text-sm w-8 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                  />
+                  <span className="text-muted-foreground text-[10px] font-medium -ml-1">kg</span>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="h-full w-8 rounded-xl hover:bg-white hover:shadow-sm text-primary"
+                  onClick={() => setLocalQuantity(q => q + 1)}
+                >
+                  <Plus className="h-3 w-3" />
+                </Button>
               </div>
               <Button
-                className="flex-1 rounded-2xl h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all active:scale-95"
+                className="flex-1 rounded-2xl h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all active:scale-95 px-0"
                 onClick={handleAddToCart}
                 disabled={!product.inStock}
               >
@@ -155,18 +173,21 @@ export default function ProductCard({ product, isListView = false }: ProductCard
               >
                 <Minus className="h-4 w-4" />
               </Button>
-              <input
-                type="number"
-                min="5"
-                value={quantity}
-                onChange={(e) => {
-                  const val = parseInt(e.target.value);
-                  if (!isNaN(val) && val >= 5) {
-                    updateQuantity(product.id, val);
-                  }
-                }}
-                className="font-semibold text-lg w-16 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
-              />
+              <div className="flex items-center justify-center">
+                <input
+                  type="number"
+                  min="5"
+                  value={quantity}
+                  onChange={(e) => {
+                    const val = parseInt(e.target.value);
+                    if (!isNaN(val) && val >= 5) {
+                      updateQuantity(product.id, val);
+                    }
+                  }}
+                  className="font-semibold text-lg w-12 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                />
+                <span className="text-muted-foreground text-xs font-medium -ml-1 pr-1">kg</span>
+              </div>
               <Button
                 variant="ghost"
                 size="icon"
