@@ -60,8 +60,8 @@ export default function ProductsPage() {
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Sticky Filters and Search */}
-        <div className="sticky top-20 md:top-24 z-40 glass -mx-4 px-4 py-5 md:mx-0 md:rounded-3xl mb-10 flex flex-col gap-5 shadow-sm border border-white/20">
+        {/* Filters and Search */}
+        <div className="glass -mx-4 px-4 py-5 md:mx-0 md:rounded-3xl mb-10 flex flex-col gap-5 shadow-sm border border-white/20">
           {/* Top Row: Categories & Search */}
           <div className="flex flex-col lg:flex-row gap-5 justify-between items-start lg:items-center w-full">
             <div className="flex flex-wrap gap-2 justify-start flex-1">
