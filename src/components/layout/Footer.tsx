@@ -11,7 +11,7 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="space-y-6">
-            <div className="relative h-16 w-56 bg-white/10 rounded-xl p-2">
+            <div className="relative h-20 w-64 bg-white/10 rounded-xl p-2">
               <Image 
                 src="/logo2.png" 
                 alt="Friends of Farmer Logo" 
