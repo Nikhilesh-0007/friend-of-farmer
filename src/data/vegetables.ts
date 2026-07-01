@@ -59,7 +59,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Juicy red tomatoes, ideal for curries and salads.',
     category: 'Exotic Vegetables',
-    image: '/ttttt.png',
+    image: '/products/tt.png',
     inStock: true,
   },
   {
@@ -119,7 +119,7 @@ export const vegetables: Product[] = [
     unit: 'bunch',
     description: 'Fresh and leafy spinach, rich in iron.',
     category: 'Leafy Vegetables',
-    image: '/products/prod_11.png',
+    image: '/products/prod_14.png',
     inStock: true,
   },
   {
@@ -129,7 +129,7 @@ export const vegetables: Product[] = [
     unit: 'piece',
     description: 'Crisp and tightly packed green cabbage.',
     category: 'Leafy Vegetables',
-    image: '/products/prod_12.png',
+    image: '/products/prod_15.png',
     inStock: true,
   },
   {
@@ -139,7 +139,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Cooling cucumbers, perfect for raw salads.',
     category: 'Gourds',
-    image: '/products/prod_13.png',
+    image: '/products/prod_16.png',
     inStock: true,
   },
   {
@@ -149,7 +149,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Sweet yellow pumpkin for curries and soups.',
     category: 'Gourds',
-    image: '/products/prod_14.png',
+    image: '/products/prod_12.png',
     inStock: true,
   },
   {
@@ -159,7 +159,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh bitter gourd, known for its health benefits.',
     category: 'Gourds',
-    image: '/products/prod_15.png',
+    image: '/products/prod_17.png',
     inStock: true,
   },
   {
@@ -169,7 +169,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender bottle gourd, light and easy to digest.',
     category: 'Gourds',
-    image: '/products/prod_16.png',
+    image: '/products/prod_18.png',
     inStock: true,
   },
   {
@@ -179,7 +179,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh ridge gourd for homestyle curries.',
     category: 'Gourds',
-    image: '/products/prod_17.png',
+    image: '/products/prod_19.png',
     inStock: true,
   },
   {
@@ -189,7 +189,7 @@ export const vegetables: Product[] = [
     unit: 'piece',
     description: 'Farm fresh broccoli full of antioxidants.',
     category: 'Exotic Vegetables',
-    image: '/products/prod_18.png',
+    image: '/products/prod_20.png',
     inStock: true,
   }
 ];
