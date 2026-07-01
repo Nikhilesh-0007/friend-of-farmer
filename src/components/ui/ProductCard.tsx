@@ -17,6 +17,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, isListView = false }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const [localQuantity, setLocalQuantity] = useState(5);
   const cardRef = useRef<HTMLDivElement>(null);
   
   const items = useCartStore((state) => state.items);
@@ -46,10 +47,10 @@ export default function ProductCard({ product, isListView = false }: ProductCard
       id: product.id,
       name: product.name,
       price: product.price,
-      quantity: 5,
+      quantity: localQuantity,
       image: product.image,
     });
-    toast.success(`5kg of ${product.name} added to cart!`);
+    toast.success(`${localQuantity}kg of ${product.name} added to cart!`);
   };
 
   const handleIncrement = () => {
@@ -121,14 +122,29 @@ export default function ProductCard({ product, isListView = false }: ProductCard
           isListView ? "border-t-0 pt-2 mt-0 max-w-xs" : ""
         )}>
           {quantity === 0 ? (
-            <Button
-              className="w-full rounded-2xl h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all active:scale-95"
-              onClick={handleAddToCart}
-              disabled={!product.inStock}
-            >
-              <ShoppingCart className="mr-2 h-5 w-5" />
-              Add to Cart
-            </Button>
+            <div className="flex items-center gap-2 w-full">
+              <div className="flex items-center bg-muted/50 rounded-2xl p-1 border border-border h-12 w-24 shrink-0">
+                <input
+                  type="number"
+                  min="5"
+                  value={localQuantity}
+                  onChange={(e) => {
+                    const val = parseInt(e.target.value);
+                    if (!isNaN(val) && val >= 5) setLocalQuantity(val);
+                  }}
+                  className="font-semibold text-lg w-full text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
+                />
+                <span className="text-muted-foreground text-xs font-medium pr-3">kg</span>
+              </div>
+              <Button
+                className="flex-1 rounded-2xl h-12 bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all active:scale-95"
+                onClick={handleAddToCart}
+                disabled={!product.inStock}
+              >
+                <ShoppingCart className="h-5 w-5 md:mr-2" />
+                <span className="hidden md:inline">Add</span>
+              </Button>
+            </div>
           ) : (
             <div className="flex items-center justify-between w-full h-12 bg-muted/50 rounded-2xl p-1 border border-border">
               <Button
