@@ -19,7 +19,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh farm potatoes, perfect for everyday cooking.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1518977676601-b53f82aba655?w=500&q=80',
+    image: '/products/prod_1.png',
     inStock: true,
   },
   {
@@ -29,7 +29,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Crunchy and sweet carrots, rich in Vitamin A.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?w=500&q=80',
+    image: '/products/prod_2.png',
     inStock: true,
   },
   {
@@ -39,7 +39,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Juicy red tomatoes, ideal for curries and salads.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=500&q=80',
+    image: '/products/prod_3.png',
     inStock: true,
   },
   {
@@ -49,7 +49,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Essential kitchen staple, crisp and flavorful.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?w=500&q=80',
+    image: '/products/prod_4.png',
     inStock: true,
   },
   {
@@ -59,7 +59,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender green beans, handpicked for freshness.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_5.png',
     inStock: true,
   },
   {
@@ -69,7 +69,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Nutrient-rich broccoli, great for steaming and roasting.',
     category: 'Exotic Vegetables',
-    image: 'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=500&q=80',
+    image: '/products/prod_6.png',
     inStock: true,
   },
   {
@@ -79,7 +79,7 @@ export const vegetables: Product[] = [
     unit: 'bunch',
     description: 'Fresh and leafy spinach, packed with iron.',
     category: 'Leafy Vegetables',
-    image: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=80',
+    image: '/products/prod_7.png',
     inStock: true,
   },
   {
@@ -89,7 +89,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Crisp green cabbage, ideal for stir-fries and salads.',
     category: 'Leafy Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_8.png',
     inStock: true,
   },
   {
@@ -99,7 +99,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Vibrant green bell peppers, crunchy and sweet.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=500&q=80',
+    image: '/products/prod_9.png',
     inStock: true,
   },
   {
@@ -109,7 +109,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh purple eggplant, perfect for traditional dishes.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_10.png',
     inStock: true,
   },
   {
@@ -119,7 +119,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Healthy and hydrating bottle gourd.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_11.png',
     inStock: true,
   },
   {
@@ -129,7 +129,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender ridge gourd for homestyle curries.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_12.png',
     inStock: true,
   },
   {
@@ -139,7 +139,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Sweet yellow pumpkin, rich in antioxidants.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1570586437263-ab629fccc818?w=500&q=80',
+    image: '/products/prod_13.png',
     inStock: true,
   },
   {
@@ -149,7 +149,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Earthy and sweet beetroot, great for juices and salads.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_14.png',
     inStock: true,
   },
   {
@@ -159,7 +159,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Crisp and peppery white radish.',
     category: 'Root Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_15.png',
     inStock: true,
   },
   {
@@ -169,7 +169,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Hydrating fresh cucumbers, perfect for salads.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_16.png',
     inStock: true,
   },
   {
@@ -179,7 +179,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Sweet and tender green peas.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_17.png',
     inStock: true,
   },
   {
@@ -189,7 +189,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Fresh bitter gourd, known for its health benefits.',
     category: 'Gourds',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_18.png',
     inStock: true,
   },
   {
@@ -199,7 +199,7 @@ export const vegetables: Product[] = [
     unit: 'kg',
     description: 'Tender okra, perfect for crispy fries or curries.',
     category: 'Seasonal Vegetables',
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=500&q=80',
+    image: '/products/prod_19.png',
     inStock: true,
   }
 ];
