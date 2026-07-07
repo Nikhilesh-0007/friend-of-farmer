@@ -19,7 +19,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
   const [isHovered, setIsHovered] = useState(false);
   const [localQuantity, setLocalQuantity] = useState(5);
   const cardRef = useRef<HTMLDivElement>(null);
-  
+
   const items = useCartStore((state) => state.items);
   const addItem = useCartStore((state) => state.addItem);
   const updateQuantity = useCartStore((state) => state.updateQuantity);
@@ -91,7 +91,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
             </span>
           )}
         </div>
-        
+
 
         <Image
           src={product.image}
@@ -122,7 +122,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
           isListView ? "border-t-0 pt-2 mt-0 max-w-xs" : ""
         )}>
           {quantity === 0 ? (
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col gap-2 w-full mt-2">
               <div className="flex items-center justify-between bg-muted/50 rounded-2xl p-1 border border-border h-11 w-full shrink-0">
                 <Button
                   variant="ghost"
