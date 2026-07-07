@@ -98,7 +98,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
           alt={product.name}
           fill
           className={cn(
-            "object-contain p-6 transition-transform duration-700 ease-out drop-shadow-md",
+            "object-contain p-6 transition-transform duration-700 ease-out mix-blend-multiply",
             isHovered ? "scale-110" : "scale-100"
           )}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
