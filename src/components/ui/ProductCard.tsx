@@ -78,7 +78,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
     >
       {/* Image Container */}
       <div className={cn(
-        "relative overflow-hidden bg-muted/50 flex items-center justify-center shrink-0",
+        "relative overflow-hidden bg-white flex items-center justify-center shrink-0",
         isListView ? "aspect-square sm:aspect-auto sm:w-56 sm:h-56" : "aspect-square p-6"
       )}>
         <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
@@ -98,7 +98,7 @@ export default function ProductCard({ product, isListView = false }: ProductCard
           alt={product.name}
           fill
           className={cn(
-            "object-contain p-6 transition-transform duration-700 ease-out mix-blend-multiply",
+            "object-contain p-6 transition-transform duration-700 ease-out",
             isHovered ? "scale-110" : "scale-100"
           )}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
