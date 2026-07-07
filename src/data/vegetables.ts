@@ -40,7 +40,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Onion, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_o.png",
     inStock: true,
   },
   {
@@ -91,7 +91,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Snake Gourd, delivered straight from the farm.",
     category: "Gourds",
-    image: "/about.png",
+    image: "/products/prod_30.png",
     inStock: true,
   },
   {
@@ -111,7 +111,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Ash Gourd, delivered straight from the farm.",
     category: "Gourds",
-    image: "/about.png",
+    image: "/products/prod_31.png",
     inStock: true,
   },
   {
@@ -131,7 +131,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Ivy Gourd, delivered straight from the farm.",
     category: "Gourds",
-    image: "/about.png",
+    image: "/products/prod_32.png",
     inStock: true,
   },
   {
@@ -151,7 +151,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Raw Banana, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_33.png",
     inStock: true,
   },
   {
@@ -161,7 +161,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Drumstick, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_34.png",
     inStock: true,
   },
   {
@@ -181,7 +181,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Cluster Beans, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/products/prod_10.png",
+    image: "/products/prod_35.png",
     inStock: true,
   },
   {
@@ -192,7 +192,7 @@ export const vegetables: Product[] = [
     description:
       "Fresh Field Beans (Avarekai), delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/products/prod_10.png",
+    image: "/products/prod_36.png",
     inStock: true,
   },
   {
@@ -202,7 +202,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Cowpea, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_37.png",
     inStock: true,
   },
   {
@@ -212,7 +212,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh French Beans, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/products/prod_10.png",
+    image: "/products/prod_38.png",
     inStock: true,
   },
   {
@@ -232,7 +232,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Cauliflower, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_39.png",
     inStock: true,
   },
   {
@@ -272,7 +272,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Turnip, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_40.png",
     inStock: true,
   },
   {
@@ -282,7 +282,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Sweet Potato, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/products/prod_1.png",
+    image: "/products/prod_41.png",
     inStock: true,
   },
   {
@@ -292,7 +292,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Tapioca, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_42.png",
     inStock: true,
   },
   {
@@ -302,7 +302,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Elephant Foot Yam, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_43.png",
     inStock: true,
   },
   {
@@ -312,7 +312,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Colocasia (Arbi), delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_44.png",
     inStock: true,
   },
   {
@@ -322,7 +322,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Green Chilli, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_45.png",
     inStock: true,
   },
   {
@@ -342,7 +342,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Sweet Corn, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_46.png",
     inStock: true,
   },
   {
@@ -362,7 +362,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Garlic, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_47.png",
     inStock: true,
   },
   {
@@ -372,7 +372,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Ginger, delivered straight from the farm.",
     category: "Root Vegetables",
-    image: "/about.png",
+    image: "/products/prod_48.png",
     inStock: true,
   },
   {
@@ -392,7 +392,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Amaranth, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/about.png",
+    image: "/products/prod_49.png",
     inStock: true,
   },
   {
@@ -402,7 +402,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Fenugreek Leaves, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/about.png",
+    image: "/products/prod_50.png",
     inStock: true,
   },
   {
@@ -412,7 +412,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Dill Leaves, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/about.png",
+    image: "/products/prod_51.png",
     inStock: true,
   },
   {
@@ -422,7 +422,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Coriander Leaves, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/about.png",
+    image: "/products/prod_52.png",
     inStock: true,
   },
   {
@@ -432,7 +432,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Curry Leaves, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/about.png",
+    image: "/products/prod_53.png",
     inStock: true,
   },
   {
@@ -442,7 +442,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Mint Leaves, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/about.png",
+    image: "/products/prod_54.png",
     inStock: true,
   },
   {
@@ -452,7 +452,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Malabar Spinach, delivered straight from the farm.",
     category: "Leafy Vegetables",
-    image: "/products/prod_14.png",
+    image: "/products/prod_55.png",
     inStock: true,
   },
   {
@@ -462,7 +462,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Banana Stem, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_56.png",
     inStock: true,
   },
   {
@@ -472,7 +472,7 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Banana Flower, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_57.png",
     inStock: true,
   },
   {
@@ -482,17 +482,17 @@ export const vegetables: Product[] = [
     unit: "kg",
     description: "Fresh Raw Papaya, delivered straight from the farm.",
     category: "Exotic Vegetables",
-    image: "/about.png",
+    image: "/products/prod_58.png",
     inStock: true,
   },
   {
     id: "cucumber_48",
-    name: "Cucumber (ಮಂಗಳೂರು ಸೌತೆ)",
+    name: "Mangalore Cucumber (ಮಂಗಳೂರು ಸೌತೆ)",
     price: 50,
     unit: "kg",
     description: "Fresh Cucumber, delivered straight from the farm.",
     category: "Gourds",
-    image: "/products/prod_16.png",
+    image: "/products/prod_59.png",
     inStock: true,
   },
 ];
