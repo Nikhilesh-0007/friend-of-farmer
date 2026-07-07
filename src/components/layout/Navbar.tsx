@@ -72,6 +72,14 @@ export default function Navbar() {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const mobileNavLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Products', href: '/products' },
+    { name: 'Cart', href: '/cart' },
+    { name: 'Contact', href: '/contact' },
+  ];
+
   return (
     <>
       <header
@@ -173,7 +181,7 @@ export default function Navbar() {
                 </Button>
               </div>
               <div className="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6">
-                {navLinks.map((link, i) => (
+                {mobileNavLinks.map((link, i) => (
                   <motion.div
                     key={link.href}
                     initial={{ opacity: 0, x: 20 }}
@@ -195,14 +203,6 @@ export default function Navbar() {
                     </Link>
                   </motion.div>
                 ))}
-              </div>
-              <div className="p-6 border-t border-border bg-muted/30">
-                <p className="text-sm text-center text-muted-foreground mb-4">Need help with an order?</p>
-                <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  <Button className="w-full rounded-xl bg-primary hover:bg-primary/90 text-white h-12 text-base shadow-lg shadow-primary/20 transition-transform active:scale-95">
-                    Contact Us
-                  </Button>
-                </Link>
               </div>
             </motion.div>
           </>
