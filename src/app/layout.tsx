@@ -4,7 +4,6 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import FloatingWhatsAppButton from "@/components/layout/FloatingWhatsApp";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,7 +35,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <FloatingWhatsAppButton />
         <Toaster />
       </body>
     </html>
