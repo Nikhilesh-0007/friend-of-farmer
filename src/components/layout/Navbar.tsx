@@ -67,17 +67,18 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { name: 'Products', href: '/products' },
+    { name: 'Cart', href: '/cart' },
     { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/about' },
   ];
 
   const mobileNavLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
     { name: 'Products', href: '/products' },
     { name: 'Cart', href: '/cart' },
     { name: 'Contact', href: '/contact' },
+    { name: 'About', href: '/about' },
   ];
 
   return (

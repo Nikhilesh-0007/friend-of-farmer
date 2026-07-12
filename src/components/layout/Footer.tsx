@@ -40,10 +40,10 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-4">
-              {['Home', 'About Us', 'Products', 'Cart', 'Contact'].map((link) => (
+              {['Home', 'Products', 'Cart', 'Contact', 'About'].map((link) => (
                 <li key={link}>
                   <Link 
-                    href={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' ', '-')}`} 
+                    href={link === 'Home' ? '/' : `/${link.toLowerCase()}`} 
                     className="text-white/60 hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-2 group"
                   >
                     <span className="h-px w-0 bg-primary group-hover:w-4 transition-all duration-300" />
