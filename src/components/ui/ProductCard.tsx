@@ -43,14 +43,16 @@ export default function ProductCard({ product, isListView = false }: ProductCard
   };
 
   const handleAddToCart = () => {
+    const qty = Math.max(5, localQuantity);
+    setLocalQuantity(qty);
     addItem({
       id: product.id,
       name: product.name,
       price: product.price,
-      quantity: localQuantity,
+      quantity: qty,
       image: product.image,
     });
-    toast.success(`${localQuantity}kg of ${product.name} added to cart!`);
+    toast.success(`${qty}kg of ${product.name} added to cart!`);
   };
 
   const handleIncrement = () => {
@@ -136,10 +138,29 @@ export default function ProductCard({ product, isListView = false }: ProductCard
                   <input
                     type="number"
                     min="5"
-                    value={localQuantity}
+                    value={localQuantity || ''}
                     onChange={(e) => {
                       const val = parseInt(e.target.value);
-                      if (!isNaN(val) && val >= 5) setLocalQuantity(val);
+                      if (!isNaN(val)) {
+                        setLocalQuantity(val);
+                      } else {
+                        setLocalQuantity(0);
+                      }
+                    }}
+                    onBlur={() => {
+                      if (localQuantity < 5) {
+                        setLocalQuantity(5);
+                        toast.info('Minimum order quantity is 5kg');
+                      }
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        if (localQuantity < 5) {
+                          setLocalQuantity(5);
+                          toast.info('Minimum order quantity is 5kg');
+                        }
+                        e.currentTarget.blur();
+                      }
                     }}
                     className="font-semibold text-sm w-10 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
                   />
@@ -177,11 +198,28 @@ export default function ProductCard({ product, isListView = false }: ProductCard
                 <input
                   type="number"
                   min="5"
-                  value={quantity}
+                  value={quantity || ''}
                   onChange={(e) => {
                     const val = parseInt(e.target.value);
-                    if (!isNaN(val) && val >= 5) {
+                    if (!isNaN(val)) {
                       updateQuantity(product.id, val);
+                    } else {
+                      updateQuantity(product.id, 0);
+                    }
+                  }}
+                  onBlur={() => {
+                    if (quantity < 5) {
+                      updateQuantity(product.id, 5);
+                      toast.info('Minimum order quantity is 5kg');
+                    }
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      if (quantity < 5) {
+                        updateQuantity(product.id, 5);
+                        toast.info('Minimum order quantity is 5kg');
+                      }
+                      e.currentTarget.blur();
                     }
                   }}
                   className="font-semibold text-lg w-12 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"

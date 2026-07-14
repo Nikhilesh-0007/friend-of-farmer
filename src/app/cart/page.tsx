@@ -9,6 +9,7 @@ import { useCartStore } from '@/store/useCartStore';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { toast } from 'sonner';
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, clearCart } = useCartStore();
@@ -113,11 +114,28 @@ export default function CartPage() {
                             <input
                               type="number"
                               min="5"
-                              value={item.quantity}
+                              value={item.quantity || ''}
                               onChange={(e) => {
                                 const val = parseInt(e.target.value);
-                                if (!isNaN(val) && val >= 5) {
+                                if (!isNaN(val)) {
                                   updateQuantity(item.id, val);
+                                } else {
+                                  updateQuantity(item.id, 0);
+                                }
+                              }}
+                              onBlur={() => {
+                                if (item.quantity < 5) {
+                                  updateQuantity(item.id, 5);
+                                  toast.info('Minimum order quantity is 5kg');
+                                }
+                              }}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                  if (item.quantity < 5) {
+                                    updateQuantity(item.id, 5);
+                                    toast.info('Minimum order quantity is 5kg');
+                                  }
+                                  e.currentTarget.blur();
                                 }
                               }}
                               className="font-semibold text-lg w-16 text-center bg-transparent border-none focus:ring-0 p-0 m-0 [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none"
