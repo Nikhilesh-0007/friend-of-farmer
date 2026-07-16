@@ -92,16 +92,19 @@ export default function Navbar() {
       >
         <div className={cn(
           "w-full mx-auto transition-all duration-500 ease-in-out border rounded-full px-6 max-w-6xl",
-          isScrolled 
-            ? "glass shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-white/30 py-2" 
+          isScrolled
+            ? "glass shadow-[0_8px_30px_rgb(0,0,0,0.12)] border-white/30 py-2"
             : "glass shadow-[0_4px_20px_rgb(0,0,0,0.08)] border-white/20 py-3 bg-white/70 backdrop-blur-xl dark:bg-black/40"
         )}>
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center group" onClick={() => setIsMobileMenuOpen(false)}>
-              <div ref={logoRef} className="relative h-14 w-48 md:h-16 md:w-56 transition-transform duration-300 group-hover:scale-105">
-                <Image src="/logo2.png" alt="Friends of Farmer Logo" fill className="object-contain" priority />
+            <Link href="/" className="flex items-center gap-0 group" onClick={() => setIsMobileMenuOpen(false)}>
+              <div ref={logoRef} className="relative h-12 w-12 md:h-16 md:w-16 transition-transform duration-300 group-hover:scale-105 shrink-0">
+                <Image src="/logo5.png" alt="Friends of Farmer Logo" fill className="object-contain" priority />
               </div>
+              <span className="font-heading font-bold text-lg md:text-2xl text-primary tracking-tight transition-colors group-hover:text-primary/80 -ml-1.5 md:-ml-3">
+                Friend of Farmer
+              </span>
             </Link>
 
             {/* Desktop Nav */}
@@ -116,7 +119,7 @@ export default function Navbar() {
                   )}
                 >
                   {link.name}
-                  <span 
+                  <span
                     className={cn(
                       'absolute bottom-0 left-0 w-full h-[2px] bg-primary transform origin-left transition-transform duration-300 ease-out',
                       pathname === link.href ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
@@ -158,7 +161,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -166,7 +169,7 @@ export default function Navbar() {
               className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            <motion.div 
+            <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -174,9 +177,14 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-background border-l border-border shadow-2xl z-50 md:hidden flex flex-col"
             >
               <div className="flex items-center justify-between p-6 border-b border-border">
-                <div className="relative h-14 w-40">
-                  <Image src="/logo2.png" alt="Friends of Farmer" fill className="object-contain" />
-                </div>
+                <Link href="/" className="flex items-center gap-0" onClick={() => setIsMobileMenuOpen(false)}>
+                  <div className="relative h-10 w-10 shrink-0">
+                    <Image src="/logo5.png" alt="Friends of Farmer" fill className="object-contain" />
+                  </div>
+                  <span className="font-heading font-bold text-base text-primary tracking-tight -ml-1">
+                    Friend of Farmer
+                  </span>
+                </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                   <X className="h-6 w-6" />
                 </Button>

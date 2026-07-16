@@ -11,15 +11,20 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="space-y-6">
-            <div className="relative h-20 w-64 bg-white/10 rounded-xl p-2">
-              <Image 
-                src="/logo2.png" 
-                alt="Friends of Farmer Logo" 
-                fill 
-                className="object-contain p-2"
-                style={{ filter: 'brightness(0) invert(1)' }} 
-              />
-            </div>
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative h-14 w-14 bg-white/10 rounded-2xl p-2 shrink-0 transition-transform duration-300 group-hover:scale-105">
+                <Image 
+                  src="/logo5.png" 
+                  alt="Friends of Farmer Logo" 
+                  fill 
+                  className="object-contain p-2"
+                  style={{ filter: 'brightness(0) invert(1)' }} 
+                />
+              </div>
+              <span className="font-heading font-bold text-xl text-white tracking-tight transition-colors group-hover:text-primary">
+                Friend of Farmer
+              </span>
+            </Link>
             <p className="text-white/60 leading-relaxed max-w-sm text-balance text-sm">
               Premium organic vegetables harvested daily and delivered fresh to your doorstep. Supporting local farmers, building healthier communities.
             </p>
