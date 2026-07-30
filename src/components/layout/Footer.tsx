@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Heart, Camera, MessageSquare, ThumbsUp } from 'lucide-react';
+import { MapPin, Phone, Mail, Camera, MessageSquare, ThumbsUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -105,7 +105,15 @@ export default function Footer() {
             © {new Date().getFullYear()} Friends of Farmer. All rights reserved.
           </p>
           <p className="text-white/40 text-sm flex items-center gap-1">
-            Made with <Heart className="h-3 w-3 text-destructive fill-destructive" /> for local farmers
+            Developed by{' '}
+            <Link 
+              href="https://www.instagram.com/staffarc?igsh=NGI1ajBjank5aWF3" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-primary transition-colors font-medium underline"
+            >
+              StaffArc
+            </Link>
           </p>
         </div>
       </div>
